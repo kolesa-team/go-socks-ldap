@@ -1,0 +1,21 @@
+[Storage]
+UpdateInterval = 3600
+ConnectRetry = 3
+
+[Storage.LdapOptions]
+Host = "ldap.example.com:636"
+Username = "cn=socks5,ou=dsa,dc=company,dc=dev"
+Password = "myAwesomePassword"
+BaseDn = "ou=people,dc=company,dc=dev"
+Scope = 2
+DerefAliases = 0
+TimeLimit = 0
+Filter = "(&(objectClass=organizationalPerson)(memberOf=cn=socks,ou=groups,dc=company,dc=dev))"
+TlsEnabled = true
+
+[Logger]
+Severity = "info"
+
+[Server]
+Listen = ":1080"
+SoftLimit = 4096

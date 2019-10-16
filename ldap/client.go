@@ -56,7 +56,7 @@ func (c *Client) Init() error {
 	return nil
 }
 
-// клозер для gracefull отключения
+// клозер для graceful отключения
 func (c *Client) Close() error {
 	if c.ldapClient != nil {
 		c.ldapClient.Close()
